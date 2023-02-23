@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <title>Inicio</title>
+  </head>
+  <body onload="cargaDatos1()">
+    <!-- Navbar -->
+
+    <!-- //Realizar el post -->
+    <div class="container-fluid p-5 bg-primary text-white text-center">
+      <h1>Creacion de las tareas</h1>
+    </div>
+
+    <div class="container mt-3">
+      <input
+        class="input-group mb-3 input-group-lg"
+        type="text"
+        name="title"
+        id="title"
+        placeholder="ingresa tarea"
+      />
+
+      <select id="producto" name="producto">
+        <option value="1">En proceso</option>
+        <option value="2">No realizado</option>
+        <option value="3">Realizado</option>
+      </select>
+      <br />
+      <br />
+
+      <button id="post" type="button" class="btn btn-primary">
+        Crear Tarea
+      </button>
+      <!-- <button onClick= "cargaDatos1()" id="get" class="btn btn-primary">Mostrar </button> -->
+      <h4 id="texto"></h4>
+    </div>
+
+    <!-- Modal -->
+
+    <div class="container">
+      <h2 id="cuerpo">Lista de tareas</h2>
+    </div>
+
+    <!-- MODAL EDITAR -->
+    <div
+      class="modal fade"
+      id="Editar"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Editar Tarea</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container mt-3">
+              <input id="newTitle" placeholder="ingresa tarea" />
+              <select id="producto1">
+                <option value="1">En proceso</option>
+                <option value="2">No realizado</option>
+                <option value="3">Realizado</option>
+              </select>
+              <button
+                onClick="hola()"
+                id="put"
+                type="button"
+                data-dismiss="modal"
+                class="btn btn-primary"
+              >
+                Editar
+              </button>
+              <button id="cerrar" data-dismiss="modal" class="btn btn-primary">
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

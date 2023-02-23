@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <title>Inicio</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <!-- //TRAER LOS DATOS DEL Get -->
+    <div>
+      <div>
+        <input
+          type="text"
+          name="inputpost"
+          id="inputpost"
+          placeholder="Traer los datos"
+        />
+        <button id="get">Get</button>
+        <h4 id="texto"></h4>
+      </div>
+    </div>
+
+    <br /><br /><br />
+
+    <!-- //Realizar el post -->
+
+    <div>
+      <input type="text" name="title" id="title" placeholder="ingresa tarea" />
+      <br />
+
+      <select id="producto" name="producto">
+        <option value="1">Realizado</option>
+        <option value="2">No realizado</option>
+        <option value="3">En proceso</option>
+      </select>
+      <br />
+      <br />
+
+      <button id="post">Post</button>
+      <h4 id="texto"></h4>
+    </div>
+
+    <br />
+    <br />
+    <br />
+
+    <!-- METODO Editar -->
+    <div>
+      <input
+        type="text"
+        name="inputpost"
+        id="inputput"
+        placeholder="Editar tarea"
+      />
+
+      <button id="put">Editar</button>
+      <h4 id="texto"></h4>
+    </div>
+
+    <br />
+    <!-- METODO ELIMINAR -->
+    <div>
+      <input type="text" name="id" id="idTarea" placeholder="Id" />
+
+      <button id="delete">Delete</button>
+
+      <h4 id="texto"></h4>
+    </div>
+
+    <br />
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+* {
+
+    padding: 0px;
+    margin: 0px;
+
+}
+
+body {
+    background-color: #ededed;
+
+}
+.home {
+    display: flex;
+
+}
+
+button {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    /* Establecer un ancho máximo diferente para tabletas */
+    img {
+      max-width: 80%;
+    }
+  }
+  
+  @media only screen and (min-width: 992px) {
+    /* Establecer un ancho máximo diferente para dispositivos de escritorio */
+    img {
+      max-width: 60%;
+    }
+  }
+  
+
+#button {
+    display: block;
+    margin: 0 auto;
+  }
+
+
+  
+
