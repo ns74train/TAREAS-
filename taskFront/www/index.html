@@ -1,54 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/estilos.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Inicio</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </head>
   <body onload="cargaDatos1()">
-    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+      <a class="navbar-brand" href="index.html">Inicio</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="historial.html">Historial</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-    <!-- //Realizar el post -->
     <div class="container-fluid p-5 bg-primary text-white text-center">
-      <h1>Creacion de las tareas</h1>
+      <h1>Creación de las tareas</h1>
     </div>
 
     <div class="container mt-3">
-      <input
-        class="input-group mb-3 input-group-lg"
-        type="text"
-        name="title"
-        id="title"
-        placeholder="ingresa tarea"
-      />
-
-      <select id="producto" name="producto">
-        <option value="1">En proceso</option>
-        <option value="2">No realizado</option>
-        <option value="3">Realizado</option>
-      </select>
-      <br />
-      <br />
-
-      <button id="post" type="button" class="btn btn-primary">
-        Crear Tarea
-      </button>
-      <!-- <button onClick= "cargaDatos1()" id="get" class="btn btn-primary">Mostrar </button> -->
-      <h4 id="texto"></h4>
+      <form>
+        <div class="form-group">
+          <label for="title">Ingresa tarea:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            placeholder="Ingresa tarea"
+          />
+        </div>
+        <div class="form-group">
+          <label for="producto">Estado:</label>
+          <select class="form-control" id="producto" name="producto">
+            <option value="1">En proceso</option>
+            <option value="2">No realizado</option>
+            <option value="3">Realizado</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn-dark btn-block" id="post">
+          Crear Tarea
+        </button>
+        <h4 id="texto"></h4>
+      </form>
     </div>
 
-    <!-- Modal -->
-
-    <div class="container">
-      <h2 id="cuerpo">Lista de tareas</h2>
+    <div class="container-fluid">
+      <h5 id="cuerpo">Lista de tareas</h5>
     </div>
 
-    <!-- MODAL EDITAR -->
     <div
       class="modal fade"
       id="Editar"
@@ -68,33 +84,37 @@
             ></button>
           </div>
           <div class="modal-body">
-            <div class="container mt-3">
+            <div class="container mt-3" class="form-group">
               <input id="newTitle" placeholder="ingresa tarea" />
               <select id="producto1">
                 <option value="1">En proceso</option>
                 <option value="2">No realizado</option>
                 <option value="3">Realizado</option>
               </select>
+              <br />
+              <br />
               <button
                 onClick="hola()"
                 id="put"
                 type="button"
                 data-dismiss="modal"
-                class="btn btn-primary"
+                class="btn btn-warning btn-sm"
               >
                 Editar
               </button>
-              <button id="cerrar" data-dismiss="modal" class="btn btn-primary">
+              <button
+                id="cerrar"
+                data-dismiss="modal"
+                class="btn btn-dark btn-sm"
+              >
                 Cerrar
               </button>
             </div>
           </div>
         </div>
-
         <div class="modal-footer"></div>
       </div>
     </div>
-
     <script src="js/bootstrap.bundle.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/scripts.js"></script>

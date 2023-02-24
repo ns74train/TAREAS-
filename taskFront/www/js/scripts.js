@@ -88,43 +88,35 @@ function cargaDatos1() {
         // Agrega el contenido al nuevo elemento
         console.log(elemento);
         nuevoElemento.innerHTML = `
+        <br />
+        <table class="table">
+        <thead>
+          <tr>
 
-        <br/>
-          
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Id</th>
-                <th>Nombre</th>
-                <th>Status</th>
-                <th>Fecha</th>
-                </tr>
-              </tr>
-            </thead>
-            <tbody class='container'>
+            <td>Nombre</td>
+            <td>Estado</td>
 
-            <div> 
-            <td>${elemento.idTarea}</td> 
-            <td>${elemento.title}</td> 
-            <td>${elemento.status__opsnombre}</td> 
-            <td>${elemento.created_at}</p> 
-            
-      
-            <button onClick="editarPut(${elemento.idTarea})" type="button" data-toggle="modal" data-target="#Editar" class="btn btn-success">
-              Editar 
-            </button>  
-  
-            <button onClick="eliminar(${elemento.idTarea})" id="eliminar" type="button" class="btn btn-danger">
-              Eliminar
-            </button>  
-            </div>
-          </tbody> 
-          
-  
-      </table>
-         
-        
+            </tr>
+        </thead>
+        <tbody class='container'>
+
+        <div> 
+        <td>${elemento.title}</td> 
+        <td>${elemento.status__opsnombre}</td> 
  
+        </div>
+      </tbody> 
+  </table>
+  <br />
+  <td>${elemento.created_at}</td> 
+  <button onClick="editarPut(${elemento.idTarea})" type="button" data-toggle="modal" data-target="#Editar" class="btn btn-success btn-sm">
+  Editar 
+</button>  
+
+<button onClick="eliminar(${elemento.idTarea})" id="eliminar" type="button" class="btn btn-danger btn-sm">
+  Eliminar
+</button>  
+
         `;
 
         // Agrega el nuevo elemento al contenedor
